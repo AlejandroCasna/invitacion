@@ -132,6 +132,25 @@
       width: 100%;
     }
 
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .images {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sticker {
+      width: 50px;
+      height: 50px;
+      margin: 5px 0;
+    }
+
     @media (max-width: 600px) {
       .card,
       form {
@@ -156,7 +175,7 @@
 </head>
 
 <body>
-  
+  <div class="container">
     <div class="card">
       <h1>¡Mi Primer Añito!</h1>
       <h2>Alejandro Matteo</h2>
