@@ -158,7 +158,7 @@
 <body>
   <div class="container">
     <div class="card">
-      <h1>¡Mi primer Añito!</h1>
+      <h1>¡Mi Primer Añito!</h1>
       <h2>Alejandro Matteo</h2>
       <h3>17/julio/2024</h3>
       <h3>18:00</h3>
@@ -167,17 +167,17 @@
     </div>
     <div>
       <form action="https://formspree.io/f/mvgpgbvl" method="post">
-        <label for="nombre" style="font-size: 16px; color: #333; font-weight: bold;">Nombre:</label><br>
+        <label for="nombre" style="font-size: 16px; color: #f6302d; font-weight: bold;">Nombre:</label><br>
         <input type="text" id="nombre" name="nombre" required
           style="width: 90%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; text-align: center;"><br>
-        <label for="asistencia" style="font-size: 16px; color: #333; font-weight: bold;">¿Asistirás?</label><br>
+        <label for="asistencia" style="font-size: 16px; color: #0793d0; font-weight: bold;">¿Asistirás?</label><br>
         <select id="asistencia" name="asistencia" required
           style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; text-align: center;">
           <option value="si">Sí</option>
           <option value="tal vez">Tal vez</option>
           <option value="no">No</option>
         </select><br>
-        <label for="mensaje" style="font-size: 16px; color: #333; font-weight: bold;">Mensaje para el cumpleañero:</label><br>
+        <label for="mensaje" style="font-size: 16px; color: #f6302d; font-weight: bold;">Mensaje para el cumpleañero:</label><br>
         <textarea id="mensaje" name="mensaje" rows="4" cols="50"
           style="width: 90%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; text-align: center;"></textarea><br>
         <input type="submit" value="Enviar"
@@ -209,7 +209,7 @@
         const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
         const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
-        document.getElementById("countdown").innerHTML = `Faltan ${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos para tu cumpleaños.`;
+        document.getElementById("countdown").innerHTML = `Faltan ${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos para tu cumpleaños.\nCONFIRMAR ANTES DEL MIERCOLES 12:00`;
       } else {
         document.getElementById("countdown").innerHTML = "¡Feliz Cumpleaños!";
       }
