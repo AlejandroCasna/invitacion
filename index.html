@@ -136,7 +136,7 @@
       <h1>¡Feliz Cumpleaños!</h1>
       <h2>Alejandro Matteo</h2>
       <h3>17/julio/2024</h3>
-      <h3>15:00</h3>
+      <h3>18:00</h3>
       <div id="countdown"></div>
       <div id="map"></div>
     </div>
@@ -183,16 +183,22 @@
       const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
       const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
-      document.getElementById("countdown").innerHTML = `Faltan ${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos para tu cumpleaños.`;
+      document.getElementById("countdown").innerHTML = `Faltan ${dias} días, ${horas}, ${minutos} minutos y ${segundos} segundos para tu cumpleaños.`;
       setTimeout(calcularTiempoRestante, 1000);
     }
     calcularTiempoRestante();
+
+    // Inicializar el mapa
     var map = L.map('map').setView([40.38201319000914, -3.7198913882118427], 18);
+
+    // Añadir capa de mapa
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
+
+    // Añadir marcador con enlace a Google Maps
     L.marker([40.38201319000914, -3.7198913882118427]).addTo(map)
-      .bindPopup('¡Fiesta de Cumpleaños!')
+      .bindPopup('<a href="https://www.google.com/maps?q=40.38201319000914,-3.7198913882118427" target="_blank">¡Fiesta de Cumpleaños!<br>Haz clic aquí para abrir en Google Maps</a>')
       .openPopup();
   </script>
 </body>
