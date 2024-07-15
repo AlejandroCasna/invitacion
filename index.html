@@ -241,7 +241,7 @@
         const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
         const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
-        document.getElementById("countdown").innerHTML = `Faltan ${dias} días, ${horas}, minutos ${minutos}, para tu cumpleaños.\nCONFIRMAR ANTES DEL MIERCOLES 12:00`;
+        document.getElementById("countdown").innerHTML = `Faltan ${dias} días, ${horas} Horas, ${minutos} Minutos, para tu cumpleaños.\nCONFIRMAR ANTES DEL MIERCOLES 12:00`;
       } else {
         document.getElementById("countdown").innerHTML = "¡Feliz Cumpleaños!";
       }
