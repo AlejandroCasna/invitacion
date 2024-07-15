@@ -23,13 +23,17 @@
       width: 100%;
       height: 100vh;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: 10px;
+      box-sizing: border-box;
     }
 
     .container>div {
-      margin: 20px;
+      margin: 10px;
+      width: 100%;
+      max-width: 600px;
     }
 
     .card,
@@ -83,7 +87,7 @@
     .right-balloons {
       display: flex;
       align-items: center;
-      margin: 100 10px;
+      margin: 10px;
     }
 
     .balloon {
@@ -91,7 +95,7 @@
       height: 50px;
       background-color: #8dff63;
       border-radius: 50%;
-      margin: 0 50px;
+      margin: 0 5px;
       animation: moveBalloon 4s ease-in-out infinite alternate, changeColor 8s ease-in-out infinite;
     }
 
@@ -126,6 +130,27 @@
     #map {
       height: 200px;
       width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      .card,
+      form {
+        transform: none;
+        animation: none;
+      }
+
+      .container {
+        padding: 5px;
+      }
+
+      .container>div {
+        margin: 5px;
+      }
+
+      .balloon {
+        width: 40px;
+        height: 40px;
+      }
     }
   </style>
 </head>
@@ -175,22 +200,22 @@
 
   <script>
     function calcularTiempoRestante() {
-    const cumpleaños = new Date('2024-07-17T18:00:00');
-    const ahora = new Date();
-    const diferencia = cumpleaños - ahora;
+      const cumpleaños = new Date('2024-07-17T18:00:00');
+      const ahora = new Date();
+      const diferencia = cumpleaños - ahora;
 
-    if (diferencia > 0) {
-      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-      const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-      const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
-      document.getElementById("countdown").innerHTML = `Faltan ${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos para tu cumpleaños.`;
-    } else {
-      document.getElementById("countdown").innerHTML = "¡Feliz Cumpleaños!";
+      if (diferencia > 0) {
+        const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+        document.getElementById("countdown").innerHTML = `Faltan ${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos para tu cumpleaños.`;
+      } else {
+        document.getElementById("countdown").innerHTML = "¡Feliz Cumpleaños!";
+      }
+
+      setTimeout(calcularTiempoRestante, 1000);
     }
-
-    setTimeout(calcularTiempoRestante, 1000);
-  }
     calcularTiempoRestante();
 
     // Inicializar el mapa
