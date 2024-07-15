@@ -187,11 +187,11 @@
       setTimeout(calcularTiempoRestante, 1000);
     }
     calcularTiempoRestante();
-    var map = L.map('map').setView([40.38201319000914, -3.7198913882118427], 15);
+    var map = L.map('map').setView([40.38201319000914, -3.7198913882118427], 18);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
-    L.marker([20.084981, -98.368392]).addTo(map)
+    L.marker([40.38201319000914, -3.7198913882118427]).addTo(map)
       .bindPopup('¡Fiesta de Cumpleaños!')
       .openPopup();
   </script>
