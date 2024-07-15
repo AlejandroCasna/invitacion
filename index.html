@@ -176,16 +176,22 @@
 
   <script>
     function calcularTiempoRestante() {
-      const cumpleaños = new Date(2024, 6, 17);
-      const ahora = new Date();
-      const diferencia = cumpleaños - ahora;
+    const cumpleaños = new Date('2024-07-17T18:00:00');
+    const ahora = new Date();
+    const diferencia = cumpleaños - ahora;
+
+    if (diferencia > 0) {
       const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
       const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
       const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
-      document.getElementById("countdown").innerHTML = `Faltan ${dias} días, ${horas}, ${minutos} minutos y ${segundos} segundos para tu cumpleaños.`;
-      setTimeout(calcularTiempoRestante, 1000);
+      document.getElementById("countdown").innerHTML = `Faltan ${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos para tu cumpleaños.`;
+    } else {
+      document.getElementById("countdown").innerHTML = "¡Feliz Cumpleaños!";
     }
+
+    setTimeout(calcularTiempoRestante, 1000);
+  }
     calcularTiempoRestante();
 
     // Inicializar el mapa
