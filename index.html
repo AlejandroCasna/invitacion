@@ -141,23 +141,18 @@
       <div id="map"></div>
     </div>
     <div>
-      <form action="/enviar_respuesta" method="post"
-        style="max-width: 400px; margin: 0 auto; padding: 20px; background-color: #fff; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); align-items: center;">
+      <form action="/enviar_respuesta" method="post">
         <label for="nombre" style="font-size: 16px; color: #333; font-weight: bold;">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre" required
-          style="width: 90%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; text-align: center;"><br>
+        <input type="text" id="nombre" name="nombre" required style="width: 90%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; text-align: center;"><br>
         <label for="asistencia" style="font-size: 16px; color: #333; font-weight: bold;">¿Asistirás?</label><br>
-        <select id="asistencia" name="asistencia" required
-          style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; text-align: center; ">
+        <select id="asistencia" name="asistencia" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; text-align: center;">
           <option value="si">Sí</option>
           <option value="tal vez">Tal vez</option>
           <option value="no">No</option>
         </select><br>
         <label for="mensaje" style="font-size: 16px; color: #333; font-weight: bold;">Mensaje para la cumpleañera:</label><br>
-        <textarea id="mensaje" name="mensaje" rows="4" cols="50"
-          style="width: 90%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; text-align: center;"></textarea><br>
-        <input type="button" value="Enviar"
-          style="background-color: #0793d0; color: #fff; font-size: 16px; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+        <textarea id="mensaje" name="mensaje" rows="4" cols="50" style="width: 90%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; text-align: center;"></textarea><br>
+        <input type="submit" value="Enviar" style="background-color: #0793d0; color: #fff; font-size: 16px; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
       </form>
     </div>
     <div class="balloon-container">
