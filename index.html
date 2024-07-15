@@ -132,34 +132,22 @@
       width: 100%;
     }
 
-    .content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
     .info-and-images {
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
     }
 
     .info {
-      text-align: left;
-    }
-
-    .images {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
-      margin-left: 20px;
     }
 
     .sticker {
-      width: 50px;
-      height: 50px;
-      margin: 5px 0;
+      width: 30px;
+      height: 30px;
+      margin: 0 10px;
     }
 
     @media (max-width: 600px) {
@@ -187,8 +175,8 @@
         align-items: center;
       }
 
-      .images {
-        margin-left: 0;
+      .sticker {
+        margin: 5px 0;
       }
     }
   </style>
@@ -200,9 +188,9 @@
       <div class="info-and-images">
         <h1>¡Mi Primer Añito!</h1>
         <div class="info">
-          <img src="imagen/stick2.jpg" class="sticker" alt="Sticker de Elemental">
+          <img src="images/stick2.jpg" class="sticker" alt="Sticker de Elemental">
           <h2>Alejandro Matteo</h2>
-          <img src="imagen/stick3.jpg" class="sticker" alt="Sticker de Elemental">
+          <img src="images/stick3.jpg" class="sticker" alt="Sticker de Elemental">
         </div>
         <h3>17/julio/2024</h3>
         <h3>18:00</h3>
@@ -253,7 +241,7 @@
         const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
         const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
-        document.getElementById("countdown").innerHTML = `Faltan ${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos para tu cumpleaños.\nCONFIRMAR ANTES DEL MIERCOLES 12:00`;
+        document.getElementById("countdown").innerHTML = `Faltan ${dias} días, ${horas}, ${minutos}, y ${segundos} segundos para tu cumpleaños.\nCONFIRMAR ANTES DEL MIERCOLES 12:00`;
       } else {
         document.getElementById("countdown").innerHTML = "¡Feliz Cumpleaños!";
       }
@@ -263,7 +251,7 @@
     calcularTiempoRestante();
 
     // Inicializar el mapa
-    var map = L.map('map').setView([40.38201319000914, -3.7198913882118427], 18);
+    var map = L.map('map').setView([40.38201319000914, -3.7198913882118427], 15);
 
     // Añadir capa de mapa
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
